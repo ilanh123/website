@@ -36,6 +36,7 @@
 * {
   font-family: 'Merriweather', serif;  
   font-size: 16px;
+  text-align: center;
 }
 
 body {
@@ -108,7 +109,6 @@ main {
   margin: auto;
   color:  var(--tan);
   text-align: center; 
-  /* ????????????????????? align home   */
 }
 
 .link-text:hover {
@@ -175,11 +175,57 @@ body::-webkit-scrollbar-thumb {
 }
   
 #hero h1 {
-    font-size: 56px;
+  font-size: 56px;
+}
+/* Small screens */
+@media only screen and (max-width: 900px) {
+  .navbar {
+    bottom: 0;
+    width: 100vw;
+    height: 5rem;
+  }
+
+  .logo {
+    display: none;
+  }
+
+  .navbar-nav {
+    flex-direction: row;
+  }
+
+  .nav-link {
+    justify-content: center;
+  }
+
+  main {
+    margin: 0;
+  }
 }
 
-/* .container p {
-font-size: 18px;
-text-align: center;
-} */
-  
+/* Large screens */
+@media only screen and (min-width: 900px) {
+  .navbar {
+    top: 0;
+    width: 5rem;
+    height: 100vh;
+  }
+
+  .navbar:hover {
+    width: 16rem;
+  }
+
+  .navbar:hover .link-text {
+    display: inline;
+  }
+
+  .navbar:hover .logo svg
+  {
+    margin-left: 11rem;
+  }
+
+  .navbar:hover .logo-text
+  {
+    left: 0px;
+  }
+}
+
