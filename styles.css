@@ -1,66 +1,185 @@
-@keyframes colorShift {
+/* @keyframes colorShift {
     0% {
-      background-color: rgb(170, 207, 170);
+      background-color: rgb(153, 182, 194);
     }
-    25% {
-      background-color: rgb(142, 182, 142);
+    15% {
+      background-color: rgb(137, 166, 179);
     }
-    50% {
-      background-color: rgb(104, 153, 104);
+    30% {
+      background-color: rgb(124, 153, 167);
+    }
+    45% {
+      background-color:  rgb(161, 199, 218);
+    }
+    60% {
+      background-color: rgb(148, 183, 201);
     }
     75% {
-      background-color:  rgb(107, 190, 107);
+        background-color: rgb(161, 199, 218);
+      }
+    90% {
+        background-color: rgb(124, 153, 167);
     }
     100% {
-      background-color: rgb(169, 202, 169);
+        background-color: rgb(137, 166, 179);
     }
-  }
-
-  @keyframes NameColorShift {
-    100% {
-      color: rgb(170, 207, 170);
-    }
-    75% {
-      color: rgb(142, 182, 142);
-    }
-    50% {
-      color: rgb(104, 153, 104);
-    }
-    25% {
-      color:  rgb(107, 190, 107);
-    }
-    0% {
-      color: rgb(169, 202, 169);
-    }
-  }
-  
-
-  body {
-    margin: 0;
-    padding: 0;
-  }
-  
-  .container {
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    animation: colorShift 12s infinite;
-  }
-  
-  /* .container h1, .container p {
-    color: white;
-    font-family: Cambria, sans-serif;
   } */
-  
-  /* .container h1 {
-    font-size: 56px;
-  } */
-#name h1 {
-    font-size: 56px;
-    animation: NameColorShift 15s infinite;
+
+:root {
+  --grain: #D7CEC7;
+  --oxblood: #76323F;
+  --blackboard: #302e2f;
+  --tan: #C09F80;
+  --transition-speed: 500ms
 }
-  .container p {
-    font-size: 18px;
-  }
+
+* {
+  font-family: 'Merriweather', serif;  
+  font-size: 16px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  background-color: var(--grain);
+}
+
+.navbar {
+  width: 6rem;
+  height: 100vh;
+  position: fixed;
+  background-color:var(--blackboard);
+  text-transform: uppercase;
+  transition: width 200ms ease;
+}
+
+.navbar:hover {
+  width: 14rem;
+}
+
+.navbar:hover .link-text {
+  display: block;
+}
+
+.navbar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nav-item {
+  width: 100%;
+}
+
+.nav-link {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  text-decoration: none;
+  filter: grayscale(100%) opacity(.7);
+  transition: var(--transition-speed);
+}
+
+.nav-link:hover {
+  filter: grayscale(0%) opacity(1);
+  /* color:  var(--oxblood); */
+  background-color: var(--oxblood);
+}
+
+.fa-solid {
+  min-width: 1rem;
+  margin: 0 1rem;
+  color: var(--tan);
+}
+
+.fa-solid:hover {
+  transition: var(--transition-speed);
+}
+
+.link-text {
+  font-family: 'Open Sans';
+  display: none;
+  margin: auto;
+  color:  var(--tan);
+  text-align: center; 
+  /* ????????????????????? align home   */
+}
+
+.link-text:hover {
+  transition: 300ms;
+  
+}
+
+.logo {
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 1rem;
+  text-align: center;
+  font-size: 1.5rem;
+  letter-spacing: 0.3ch;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.logo svg {
+  transform: rotate(0deg);
+  transition: var(--transition-speed);
+  transform-origin: center;
+}
+
+.logo-text {
+  margin-left: 8px;
+}
+
+.fa-primary {
+  color: #863b48;
+}
+
+.fa-secondary {
+  color: #ad4b5d;
+}
+
+.navbar:hover .logo svg {
+  width: 3rem;
+  height: 3rem;
+  transform: rotate(-180deg) scale(1);
+  transition: transform(300ms);
+}
+
+body::-webkit-scrollbar {
+  width: 0.25rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: #1e1e24;
+}
+
+body::-webkit-scrollbar-thumb {
+  background: #6649b8;
+}
+
+.container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* animation: colorShift 12s infinite; */
+}
+  
+#hero h1 {
+    font-size: 56px;
+}
+
+/* .container p {
+font-size: 18px;
+text-align: center;
+} */
   
