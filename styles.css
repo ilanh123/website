@@ -217,7 +217,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Large screens */
-@media only screen and (min-width: 900px) {
+/* @media only screen and (min-width: 900px) {
   .navbar {
     top: 0;
     width: 5rem;
@@ -241,5 +241,5 @@ body::-webkit-scrollbar-thumb {
   {
     left: 0px;
   }
-}
+} */
 
