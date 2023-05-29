@@ -1,0 +1,66 @@
+@keyframes colorShift {
+    0% {
+      background-color: rgb(170, 207, 170);
+    }
+    25% {
+      background-color: rgb(142, 182, 142);
+    }
+    50% {
+      background-color: rgb(104, 153, 104);
+    }
+    75% {
+      background-color:  rgb(107, 190, 107);
+    }
+    100% {
+      background-color: rgb(169, 202, 169);
+    }
+  }
+
+  @keyframes NameColorShift {
+    100% {
+      color: rgb(170, 207, 170);
+    }
+    75% {
+      color: rgb(142, 182, 142);
+    }
+    50% {
+      color: rgb(104, 153, 104);
+    }
+    25% {
+      color:  rgb(107, 190, 107);
+    }
+    0% {
+      color: rgb(169, 202, 169);
+    }
+  }
+  
+
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: colorShift 12s infinite;
+  }
+  
+  /* .container h1, .container p {
+    color: white;
+    font-family: Cambria, sans-serif;
+  } */
+  
+  /* .container h1 {
+    font-size: 56px;
+  } */
+#name h1 {
+    font-size: 56px;
+    animation: NameColorShift 15s infinite;
+}
+  .container p {
+    font-size: 18px;
+  }
+  
