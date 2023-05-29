@@ -177,6 +177,15 @@ body::-webkit-scrollbar-thumb {
 #hero h1 {
   font-size: 56px;
 }
+
+
+@media only screen and (max-width: 450px) {
+  .logo-text {
+    display: none;
+  }
+}
+
+
 /* Small screens */
 @media only screen and (max-width: 900px) {
   .navbar {
@@ -189,12 +198,17 @@ body::-webkit-scrollbar-thumb {
     display: none;
   }
 
+  .logo-text {
+    display: inline;
+  }
+  
   .navbar-nav {
     flex-direction: row;
   }
 
   .nav-link {
     justify-content: center;
+    transition: 0ms;
   }
 
   main {
