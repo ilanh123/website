@@ -40,12 +40,22 @@
 }
 
 body {
+  background-image: radial-gradient( circle 758px at 87.5% 77.8%,  var(--grain) 9.6%, rgba(118,50,63,1) 100.2% );
   margin: 0;
   padding: 0;
 }
 
-main {
-  background-color: var(--grain);
+#box-transition {
+  position: relative;
+}
+
+#box-transition h1:hover, p:hover{
+  position: relative;
+  color: black;
+  transition: color 0.5s;
+  background: linear-gradient(to right, #f1e9e3, #ad4b5d);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar {
@@ -72,10 +82,12 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 1rem;
 }
 
 .nav-item {
   width: 100%;
+  padding-bottom: 1rem;
 }
 
 .nav-link {
@@ -97,6 +109,7 @@ main {
   min-width: 1rem;
   margin: 0 1rem;
   color: var(--tan);
+  /* padding-bottom: 12rem; */
 }
 
 .fa-solid:hover {
@@ -176,6 +189,8 @@ body::-webkit-scrollbar-thumb {
   
 #hero h1 {
   font-size: 56px;
+  position: relative;
+  overflow: hidden;
 }
 
 
